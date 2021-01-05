@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title> Sign Up </title>
+        <style>
+            
+         body{
+                text-align: center;
+               background-image: linear-gradient(lightgray,gray);
+            }
+            table{
+                margin : auto ;
+                padding : 30px; 
+            }
+            td{
+                padding : 10px 25px  ; 
+            }
+            label{
+                font-size : 22px ; 
+                font-family: arial;
+            }
+            .input{
+                width : 250px ; 
+                height : 30px ; 
+                padding : 10px ; 
+                font-size: 18px;
+                font-family: cursive;
+                background-color: lightgray ;
+                border-radius: 8px ;
+                outline : none ; 
+            }
+            button{
+                padding : 20px ; 
+                margin : 20px ; 
+                font-size : 20px ; 
+                font-family: cursive;
+                border-radius: 20px;
+                outline : none; 
+                background-color : purple;
+                color : white  ; 
+            }
+            fieldset{
+        
+                width : 700px ; 
+                margin : auto ;
+                
+            }
+          
+        </style>
+    </head>
+    <body>
+        <h1> Welcome !! </h1>
+        <marquee scrollamount="15"><h2> Subscribe Now ... It's free </h2></marquee>
+        <form   onsubmit="return validate()">
+            <fieldset>
+                <legend>    <img src="form_image.png"   width="70px"  height="70px" style="border-radius: 100%;">      </legend>
+            <table>
+                <tr>
+                    <td>  <label    for="fname"> First Name  </label> </td>
+                    <td>   <input type="text"   id="fname"  name="fname"    class="input">         </td>
+                </tr>   
+                
+                <tr>
+                    <td>  <label    for="lname"> Last Name  </label> </td>
+                    <td>   <input type="text"   id="lname"  name="lname"      class="input">         </td>
+                </tr>  
+
+                <tr>
+                    <td>  <label> Gender </label> </td>
+                    <td>           
+                        <label>   <input type="radio"   name="gender"> Male  </label>
+                        <label>   <input type="radio"   name="gender"> Female  </label>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>  <label    for="email"> Email  </label> </td>
+                    <td>   <input type="email"   id="email"  name="email"     class="input">         </td>
+                </tr>  
+
+                <tr>
+                    <td>  <label    for="pass"> Password  </label> </td>
+                    <td>   <input type="password"   id="pass"  name="pass"  class="input">        </td>
+                </tr>  
+
+                <tr>
+                    <td>  <label    for="cpass"> Confirm Password  </label> </td>
+                    <td>   <input type="password"   id="cpass"  name="cpass"  class="input">        </td>
+                </tr>  
+
+                <tr>
+                    <td>  <label    for="contact"> Contact No. </label> </td>
+                    <td>   <input type="text"   id="contact"  name="contact"  class="input">        </td>
+                </tr>  
+
+                <tr>
+                    <td>  <label    for="dob"> Date of Birth </label> </td>
+                    <td>   <input type="date"   id="dob"  name="dob"   max="2010-01-01"   class="input">   </td>
+                </tr>  
+
+            </table>
+            <br> 
+        </fieldset>
+            <input type="submit">
+        </form>
+
+        <script>
+             function validate()
+            {
+                var p1 = document.getElementById("pass").value ; 
+                var p2 = document.getElementById("cpass").value ; 
+                var email = document.getElementById("email").value ; 
+                
+                if(p1.length == 0 ){
+                    alert("Password cannot be empty") ;
+                    return false ;
+                }
+
+                if(p1.trim().length == 0){
+                    alert("Passwords can't contain spaces ");
+                    return false ; 
+                }
+
+                if( p1 == p2){
+                    alert("Passwords Matched");
+                    return true ;
+                }
+                else{
+                    // alert("Passwords not Matched ");
+                    document.getElementById("msg").innerHTML = "Passwords Not Matched" ; 
+                    return false ;
+                }
+                
+                var regexp_email = /^([a-z A-Z 0-9 _ ]+)@[a-z A-Z]{3,15}\.[a-z A-Z]{2,5}$/;
+            
+            if(regexp_email.test(email))
+            {
+               alert("Valid") ; 
+            }
+            else{
+                alert("Invalid") ; 
+            }
+            }
+        </script>
+    </body>
+
+</html>

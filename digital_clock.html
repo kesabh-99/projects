@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Digital Clock in JS </title>
+        <style>
+            body{
+                text-align: center;
+                background-image: linear-gradient(lightgray, gray);
+            }
+            #time,#date{
+                text-align : center;
+                color : green ; 
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size : 35px ; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Digital Clock </h1>
+        <div    id="time">    </div>
+        <div    id="date">    </div>
+        
+        <script>
+            function clock(){
+            var time = new Date() ;    // time is an object of Date type which will give us all the required values
+
+            var hour = time.getHours() ;             // to extract the current hour  
+            var min =  time.getMinutes() ;           // to extract the current minutes 
+            var sec = time.getSeconds() ;            // to extract the current seconds          
+
+            var day = time.getDate();               //to extract the current day
+            var month = time.getMonth() + 1;             // to extract the current month( 0-11 )
+            var year = time.getFullYear();              //to extract the current year 
+           
+
+
+            var x = hour + ":" + min + ":" + sec ;           
+            var y = day + "/" + month + "/" + year ; 
+
+            document.getElementById("time").innerHTML = x ; 
+            document.getElementById("date").innerHTML = y ;
+            }
+            //setInterval is used to call another function repeatedly after equal interval of time 
+            setInterval(clock, 1000) ; 
+
+        </script>
+    </body>
+</html>

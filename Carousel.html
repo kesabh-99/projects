@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin : 0px ; 
+                padding : 0px ; 
+                text-align: center;
+            }
+            .box{
+                position: relative;
+                border : 2px solid  black ;
+                height : 500px ; 
+                background-image: url(image1.jpg);
+                background-repeat: no-repeat;
+                background-size:100% 100%;
+                transition : all 0.7s ; 
+            }
+            .dot{
+                position : absolute ; 
+                bottom : 5px ; 
+                left : 45% ; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Carousel</h1>
+        <div class="box"    id="box">
+            <div class="dot">
+                <input type="radio" name="dot" id="btn0"    >
+            <input type="radio" name="dot" id="btn1"    >
+            <input type="radio" name="dot" id="btn2"    >
+            <input type="radio" name="dot" id="btn3"    >
+            </div>
+        </div>
+       
+        <script>
+            var images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"  ] ;
+            //                  0           1               2           3
+            var i = 0; 
+            setInterval(slide, 3000) ; 
+
+            function slide()
+            {   i++ ; 
+                if( i >= 4 ) {  i = 0 ; }
+                document.getElementById("box").style.backgroundImage = "url(" + images[i] + ")"  ; 
+                document.getElementById("btn" + i).checked = "checked" ; 
+            }
+
+            
+        </script>
+    </body>
+</html>

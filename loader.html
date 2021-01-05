@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Loader</title>
+    <style>
+         #time,#date{
+                border : gray 4px groove;
+                text-align : center;
+                color : green ; 
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size : 22px ; 
+            }
+        #loader{
+            width : 100px;
+            height : 100px;
+            border-radius : 50%;
+            border-top : red 5px solid;
+            animation-name : sample;
+            animation-duration: 2s;
+            animation-timing-function : linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes sample 
+        {
+                from{ transform : rotate(0deg);   }
+                to{  transform : rotate(360deg);  }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+    </div>
+
+    <div    id="content"    style="display: none;">
+        <h1> My website </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta et laboriosam rerum dolorem natus dicta asperiores, iste minima atque culpa quis sit ducimus vero fugit accusamus animi, quidem amet ipsum aperiam! Ratione a ab laboriosam vitae accusamus quos dolorem, eos expedita cupiditate voluptatum culpa illum perferendis cum quia, mollitia laborum, autem saepe! Minus, obcaecati quidem. Aliquid necessitatibus illo quia iusto omnis, consequuntur a ut ratione cupiditate! Accusantium inventore obcaecati sit iure iusto molestias dolorem tenetur assumenda harum ex architecto ad quae animi maxime sed id nihil, soluta placeat ullam. Natus, neque. Totam dignissimos cum assumenda obcaecati officiis numquam quasi quaerat.
+        </p>
+        <div    id="time">    </div>
+        <div    id="date">    </div>
+    </div>
+
+    <script>
+        
+        function show(){
+            document.getElementById("loader").style.display = "none" ; 
+            document.getElementById("content").style.display = "block" ; 
+        }
+        function clock(){
+            var time = new Date() ;    // time is an object of Date type which will give us all the required values
+
+            var hour = time.getHours() ;             // to extract the current hour  
+            var min =  time.getMinutes() ;           // to extract the current minutes 
+            var sec = time.getSeconds() ;            // to extract the current seconds          
+
+            var day = time.getDate();               //to extract the current day
+            var month = time.getMonth() + 1;             // to extract the current month( 0-11 )
+            var year = time.getFullYear();              //to extract the current year 
+           
+
+
+            var x = hour + ":" + min + ":" + sec ;           
+            var y = day + "/" + month + "/" + year ; 
+
+            document.getElementById("time").innerHTML = x ; 
+            document.getElementById("date").innerHTML = y ;
+            }
+            //setInterval is used to call another function repeatedly after equal interval of time 
+            setInterval(clock, 1000) ; 
+
+        setTimeout(show, 3000); 
+    </script>
+</body>
+</html>
