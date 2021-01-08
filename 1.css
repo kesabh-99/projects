@@ -1,0 +1,186 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 0px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+    border-right: white 2px solid;
+}
+
+.navbar {
+    background-color: black;
+    height: 50px;
+}
+
+.navbar ul li a:hover {
+    background-color: blue;
+}
+
+.navbar h1 {
+    color: white;
+    float: right;
+    line-height: 0.3;
+    margin-right: 30px;
+}
+
+.navbar h1:hover {
+    text-shadow: 7px 7px 7px gray;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+    min-height: 140%;
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white    ;
+}
+
+.first-text,
+.second-text,
+.third-text {
+    min-height: 500px;
+    background-color: darkgray;
+}
+
+.second,
+.third,
+.fourth {
+    min-height: 400px;
+}
+
+.first {
+    position: relative;
+}
+
+.second {
+    background-image: url(2.jpg);
+}
+
+.third {
+    background-image: url(3.jpg);
+    min-height: 80%;
+}
+
+.fourth {
+    background-image: url(4.jpg);
+}
+
+.first .content {
+    position: absolute;
+    top: 33%;
+    left: 34%;
+    text-align: center;
+}
+
+.first .content h1 {
+    font-size: 50px;
+    font-family: cursive;
+    margin: 20px;
+    text-shadow: 0px 0px 10px purple;
+}
+
+.first .content button {
+    padding: 18px;
+    width: 300px;
+    font-size: 40px;
+    font-family: algerian;
+    background-color: rgb(27, 26, 26);
+    border: black 1px solid;
+    cursor:pointer ;
+    color : white ; 
+    border-radius: 4px;
+}
+.first .content button:hover{background-color: gray;}
+
+.first-text {
+    text-align: center;
+    font-size: 20px;
+    padding: 40px;
+    background-color: black;
+    color: white ;
+}
+
+.second-text {
+    text-align: center;
+    background: black ; 
+    color : white ;
+}
+
+.second-text .menu {
+    border: 2px solid black;
+}
+
+.second-text .menu h2 {
+    text-align: left;
+}
+
+.second-text .menu button {
+    float: right;
+}
+.third-text{
+    text-align: center;
+    background-color: black;
+    color : white ;
+}
+.third-text input, textarea{
+    width : 75% ;
+    height: 30px;
+    padding : 10px ; 
+    font-family: cursive;
+    margin : 10px ; 
+    border-radius: 5px ; 
+    font-size: 16px;
+}
+.third-text input:hover, textarea:hover, .third-text input:focus, textarea:focus{
+    background-color: rgba(189, 165, 165, 0.829);
+}
+
+.footer {
+    height: 200px;
+    background-color: black;
+    color: white;
+    /* display:flex ; 
+flex-direction: column; */
+}
+
+.footer .icons {
+    height: 80%;
+    border: white 2px solid;
+    width: 100%;
+    text-align: center;
+    line-height: 150px;
+}
+
+.footer .text {
+    height: 20%;
+    border: white 2px solid;
+    width: 100%;
+}
+
+.navbar {
+    opacity: 0.5;
+}
+
+.navbar:hover {
+    opacity: 1;
+}
