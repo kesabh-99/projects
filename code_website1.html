@@ -1,0 +1,265 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="navbar_style.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            /* border : red 3px solid; */
+            box-sizing: border-box;
+            min-height: 80%;
+            background-image: url('home.jpg');
+            background-size: cover;
+            background-color: rgb(148, 137, 137);
+            background-blend-mode: overlay;
+            text-align: center;
+            padding-top: 150px;
+            text-shadow: 9px 0px 7px white;
+        }
+
+        .box h1,
+        .box h2 {
+            margin: 10px;
+            font-size: 40px;
+        }
+
+        .box button {
+            width: 300px;
+            margin: 20px;
+            font-size: 25px;
+            font-family: cursive;
+            padding: 15px;
+            color: white;
+            background-color: rgb(134, 65, 134);
+            cursor: pointer;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        .box button:hover {
+            padding: 18px;
+            background-color: purple;
+        }
+
+        .first,
+        .second {
+            min-height: 400px;
+            /* border : black 10px solid; */
+            padding: 5px;
+            display: flex;
+            margin: 10px 0px;
+            padding: 30px;
+        }
+
+        .first .left,
+        .first .right,
+        .second .left,
+        .second .right {
+            /* border : green 1px solid; */
+            min-height: 100%;
+        }
+
+        .first .left {
+            width: 30%;
+        }
+
+        .first .right {
+            width: 70%;
+        }
+
+        .second .left {
+            width: 70%;
+        }
+
+        .second .right {
+            width: 30%;
+        }
+
+        /* content on the right of first section and on the left of second section */
+        .first .right,
+        .second .left {
+            padding-top: 50px;
+            text-align: center;
+            line-height: 35px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 20px;
+            font-family: forte;
+        }
+
+        /* whole footer box styling  */
+        .footer {
+            min-height: 200px;
+            /* border : black 3px solid; */
+            margin-top: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            background-color: purple;
+            color : white;
+        }
+
+        /* box containing various icons in footer  */
+        .footer .images {
+            height: 70%;
+            width: 100%;
+            line-height: 150px;
+        }
+
+        /*entire box containing faqs, copyrights etc in footer  */
+        .footer .links {
+            display: flex;
+            height: 30%;
+            justify-content: space-between;
+            box-shadow: 2px 2px 5px black;
+            font-family: cursive;
+            font-size: 17px;
+        }
+
+        /* seperate boxes of faq, copyright, t&c */
+        .footer .f_box2 {
+            height: 100%;
+            width: 20%;
+            line-height: 50px;
+        }
+
+        .third {
+            margin : 10px 0px ; 
+            display: flex;
+            flex-wrap: wrap;
+            padding : 10px ; 
+            justify-content: space-evenly;
+        }
+
+        .third .item {
+            border-radius: 2%;
+            overflow: hidden;
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .info{
+            position: absolute ; 
+            opacity: 0 ;
+            width: 100%;
+            height: 100%;
+            bottom : -100% ; 
+            left : 0px ; 
+            background-color: rgba(68, 63, 64, 0.863) ;
+            transition: all .5s;
+            text-align: center;
+            font-size: 40px ; 
+            color : white ;             
+        }
+        .third .item:hover .info{
+            bottom : 0px ; opacity: 1 ;
+
+        }
+
+        /* footer icons styling  */
+        .footer .images .f_image {
+            border-radius: 50%;
+            margin: 0px 30px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .f_image:hover {
+            cursor: pointer;
+            box-shadow: 3px 3px 5px gray;
+        }
+
+        /* footer icons styling ends here  */
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2> CodeWithUs.com </h2>
+        <ul>
+            <li> <a href=""> Home </a> </li>
+            <li> <a href=""> About </a> </li>
+            <li> <a href=""> Courses </a> </li>
+            <li> <a href=""> Contact </a> </li>
+            <li> <a href=""> Login/ Sign Up </a> </li>
+        </ul>
+    </div>
+    <div class="box">
+        <h1>Welcome & Code With Us !!</h1>
+        <h2> &#8595; Get a free trial now &#8595; </h2>
+        <button> Book Now ! </button>
+    </div>
+
+    <div class="third">
+        <div class="item">
+            <img src="1.jpg" width="100%" height="100%">
+            <div class="info">
+                1-1 sessions for your kid
+            </div>
+        </div>
+        <div class="item">
+            <img src="2.jpg" width="100%" height="100%">
+            <div class="info">
+                Experienced Mentors
+            </div>
+        </div>
+        <div class="item">
+            <img src="3.jpg" width="100%" height="100%">
+            <div class="info">
+                Get a Free 60-min session now !!
+            </div>
+        </div>
+    </div>
+
+    <div class="first">
+        <div class="left"> <img src="vision.jpg"
+                style="width:100%;  box-shadow: 4px 4px 4px black; height:90%; border-radius : 10px"> </div>
+        <div class="right">
+            <h1 style=" text-shadow: 9px 0px 7px white;"> Our Mission </h1> <br><br>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora harum provident at exercitationem
+                corrupti blanditiis, eum quia odit. Nisi eius aut corrupti eveniet facilis. Esse, quod. Earum nobis
+                assumenda vel tenetur ex reiciendis quos voluptate ipsum autem! Ipsam, expedita. Vitae voluptas animi
+                quidem ad necessitatibus dicta nam hic molestiae.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="second">
+        <div class="left">
+            <h1 style="text-shadow: 9px 0px 7px white;">Why you should learn coding ?</h1> <br><br>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur excepturi perferendis veniam
+                eius necessitatibus reprehenderit corrupti deserunt animi fuga, ab natus beatae possimus perspiciatis
+                illum, nesciunt error illo expedita omnis est veritatis quam impedit! Laudantium, eaque corporis
+                officiis ratione eum velit laboriosam aliquid? Molestias id nesciunt ipsam repellat iste?
+            </p>
+
+        </div>
+        <div class="right"> <img src="code.jpg"
+                style="width:100%;   box-shadow: 4px 4px 4px black;   height:90%; border-radius : 10px"></div>
+    </div>
+
+    <div class="footer">
+        <div class="images">
+            <img src="fb_icon.png" class="f_image">
+            <img src="insta_icon.png" class="f_image">
+            <img src="twitter_icon.png" class="f_image">
+            <img src="google+icon.png" class="f_image">
+        </div>
+
+
+        <div class="links">
+            <div class="f_box2"> FAQs </div>
+            <div class="f_box2"> &copy; Copyrights Reserved </div>
+            <div class="f_box2"> Terms and Condiditons </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
