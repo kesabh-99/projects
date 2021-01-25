@@ -42,8 +42,8 @@
 .second,
 .third,
 .fourth {
-    min-height: 140%;
-    background-image: url(1.jpg);
+    min-height: 90%;
+    background-image: url(i1.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -68,16 +68,16 @@
 }
 
 .second {
-    background-image: url(2.jpg);
+    background-image: url(i2.jpg);
 }
 
 .third {
-    background-image: url(3.jpg);
+    background-image: url(i3.jpg);
     min-height: 80%;
 }
 
 .fourth {
-    background-image: url(4.jpg);
+    background-image: url(i4.jpg);
 }
 
 .first .content {
