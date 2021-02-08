@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link rel="stylesheet" href="navbar_style.css">
+    <style>
+        div{
+            margin : 4px 0px; 
+        }
+        *{
+            margin : 0px;
+            padding : 0px;
+        }
+        .box{
+            border : red 3px solid;
+            min-height : 90%;
+            /* background-image : url('https://source.unsplash.com/collection/190727/1600x900'); */
+            /* background-size: cover ; */
+            /* background-color: rgb(148, 137, 137) ; */
+            background-blend-mode: overlay;
+        }
+        .first, .second{
+            min-height : 400px;
+            border : black 10px solid;
+            padding : 5px;
+            display: flex;
+            margin : 10px 0px ; 
+        }
+        .first .left, .first .right{
+            border : green 1px solid;
+            min-height : 100%;
+        }
+        .first .left{
+            width : 30%;
+        }
+        .first .right {
+            width : 70%;
+        }
+
+        .second .left, .second .right{
+            border : red 1px solid;
+            min-height : 100%;
+        }
+        .third{
+            display: flex;
+            flex-wrap: wrap;
+            border : brown 5px solid ; 
+            justify-content: space-evenly;
+        }
+        .third .item{
+            width : 300px ; 
+            height : 300px ; 
+            border : blue 1px solid; 
+        }
+        .second .left{width : 70%;}
+        .second .right { width : 30%;}
+        .footer{
+            min-height : 200px;
+            border : black 3px solid;
+            margin-top : 10px;
+            text-align : center;
+            line-height: 200px;
+            font-size : 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>  My Website </h1>
+        <ul>
+            <li> <a href=""> Home </a>      </li>
+            <li> <a href="">About Us</a>    </li> 
+            <li> <a href="">Contact Us</a>  </li> 
+            <li> <a href="">Gallery</a>     </li>
+            <li> <a href="">Services</a>    </li> 
+        </ul>
+    </div>
+   <div class="box">
+       <h1>Heading</h1>
+   </div>
+
+   <div class="third">
+       <div class="item"> </div>
+       <div class="item"> </div>
+       <div class="item"> </div>
+   </div>
+
+   <div class="first">
+        <div class="left"></div>
+        <div class="right"></div>
+   </div>
+
+   <div class="second">
+       <div class="left"></div>
+       <div class="right"></div>
+   </div>
+
+    <div class="footer">Footer</div>
+
+</body>
+</html>
